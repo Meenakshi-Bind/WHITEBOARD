@@ -12,7 +12,7 @@ function undoLine(){
         let undoLine = linesDB.pop();
         redoLinesDB.push(undoLine);
     
-        // clear canvas
+       
         ctx.clearRect(0 , 0 , canvas.width , canvas.height);
     
         drawLinesFromDB();
