@@ -4,12 +4,14 @@ sticky.addEventListener("click", addSticky);
 let loadFile = function(event) {
   let sticky_On=document.querySelectorAll(".sticky-content");
   console.log(sticky_On.length);
+  
   if(sticky_On.length>0)
   {
   sticky_On[sticky_On.length-1].innerHTML = `<img src="" id="output" class="downLoaded" width="220" height="150"/>`
  
   let image = document.querySelectorAll('#output');
   image[image.length-1].src = URL.createObjectURL(event.target.files[0]);
+  sticky_On[sticky_On.length-1].setAttribute("contenteditable" , "false");
   }
   else{
     return;
